@@ -3,7 +3,7 @@ A script to programmatically connect to network devices, collect information, an
 
 ## OBJECTIVE OF THE SCRIPT
 
-The script connects to a network device (CISCO), performs some 'show' commands to retrieve information (Port name, Speed, Duplex, Description, IP address, Mask) and generates an excel file with the collected data. This excel file can then be sent to other teams, archived, etc.
+The script connects to a network device, performs some 'show' commands to retrieve information (Port name, Speed, Duplex, Description, IP address, Mask) and generates an excel file with the collected data. This excel file can then be sent to other teams, archived, etc.
 
 This script provides a solid base to build on to meet your needs. You can customize it as you wish.
 
