@@ -48,7 +48,7 @@ The excel filename correspond (by default) to the hostname of the router. It can
 
 ## IMPROVEMENT
 
-I tried to keep the script very basic so that it can be easily customizable and re-usable by anyone.
+I tried to keep the script very basic so that it can be easily customizable.
 
 One way of improving this script could be, let's say if you have a huge number of devices to connect to, is to put those devices administration IP into a text file, and to modifiy the script to iterate through that text file line by line, catch the admin ip, and launch the script as a function sequentially.
 
