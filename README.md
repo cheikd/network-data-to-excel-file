@@ -1,9 +1,26 @@
 # network-data-to-excel-file
-A script to programmatically connect to network devices, collect information and put them into an excel file.
+A script to programmatically connect to network devices, collect information, and put them into an excel file.
 
-WHAT THE PROGRAM DOSE EXACTLY
+OBJECTIVE OF THE SCRIPT
 
-WHAT THE PROGRAM IS MADE OF
+The script connects to a network device (CISCO), performs some 'show' commands to retrieve information (Port name, Speed, Duplex, Description, IP address, Mask) and generates an excel file with the collected data. This excel file can then be sent to other teams, archived, etc.
+
+This script provides a solid base to build on to meet your needs. You can customize it as you wish.
+
+The script will output something like this (by default):
+
+![image](https://user-images.githubusercontent.com/104331973/190848158-5568406f-1f74-4d99-8a43-4b540f02cece.png)
+
+
+WHAT'S INSIDE
+
+1) This script mainly uses the Netmiko library to connect to network equipment and issue commands.
+Its versatility allows it to connect to any type of equipment: servers, routers, switches, firewalls, etc.
+
+2) The TextFSM module will allow parsing the output of raw CLI commands output into structured data. The data will be placed in data structures such as lists, dictionaries, etc. This allows its analysis and processing using common programming elements. Netmiko uses the TextFSM module.
+
+3) Finally the last important module is XlsxWriter. This module, as its name indicates, allows you to generate and fill in Excel files from the data you provide.
+Here it will be used to format our data and make them presentable, easily readable, and diffusable to other people even non-technical.
 
 Now that we have stated the purpose of the program and what it does, let's move on to the technical part.
 
@@ -12,12 +29,13 @@ PRE-REQUISITES
 - Python 3.x.x
 - Install the required packages from the 'requirements.txt file'
   You can use 'pip install -r requirements.txt'
+
   
-STARTING THE PROGRAM
+LAUNCHINT THE SCRIPT
 
 python3 main.py $DEVICE_ADMINISTRATION_IP
 
-exemple:
+Exemple:
 python3 main.py 10.1.1.1
 
 The script takes the device administration as an argument.
