@@ -124,4 +124,4 @@ if result_gen_excel_file[0]=="OK":
     print(f"\n{'#'*50}\n End of programme, no error. \n Total execution time: {round(total_time,3)} seconds.\n{'#'*50}")
 else:
     print ("The programme did not finish correctly.")
-    print(f"\n{'#'*50}\n End of the programme, WITH ERROR!!!!  \n{'#'*50}")
+    print(f"\n{'#'*50}\n End of programme, with error!!!\n{'#'*50}")
