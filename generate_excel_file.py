@@ -31,8 +31,6 @@ def generate_excel_file(router_hostname,router_version,router_interface_name_lis
 
 # Create cells type for titles and important words
     cell_format = workbook.add_format({'bold': True, 'bg_color': 'yellow','italic':True})
-    cell_format_bold = workbook.add_format({'bold': True, 'italic':True})
-    cell_format_dev_blue = workbook.add_format({'bg_color': '#8BEEFF'})
     cell_format_align = workbook.add_format()
     cell_format_align.set_align('center')
 
