@@ -6,6 +6,7 @@ from netmiko import ConnectHandler
 from netmiko import NetMikoAuthenticationException
 from netmiko import NetMikoTimeoutException
 from pprint import pprint
+from getpass import getpass
 import time
 import platform
 import sys
@@ -17,12 +18,12 @@ start = time.time()
 
 # Part 1 - Connect to the router, retrieve raw data and process it
 
-# Looking for an argument
+# Looking for an argument & providing credentials
 try:
     if sys.argv[1]:
         router_ip = sys.argv[1]
-        router_user = 'cisco'
-        router_password = 'cisco'
+        router_user = input('Username: ')
+        router_password = getpass('Password: ')
 
 except IndexError:
     print("Need to provide the device administration IP as an argument.")
