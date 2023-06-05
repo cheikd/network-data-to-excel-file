@@ -1,9 +1,9 @@
 # network-data-to-excel-file
 A script to programmatically connect to network devices, collect information, and put them into an excel file.
 
-## OBJECTIVE OF THE SCRIPT
+## SCRIPT GOALS
 
-The script connects to a network device, performs some 'show' commands to retrieve information (Port name, Speed, Duplex, Description, IP address, Mask) and generates an excel file with the collected data. This excel file can then be sent to other teams, archived, etc.
+The script connects to a network device, performs some 'show' commands to retrieve information (Port name, Speed, Duplex, Description, IP address, Mask) and generates an excel file with the collected data. This excel file can then be sent to other teams, archived, etc for documentation purposes.
 
 This script provides a solid base to build on to meet your needs. You can customize it as you wish.
 
@@ -17,7 +17,7 @@ The script will output something like this (by default):
 1) This script mainly uses the Netmiko library to connect to network equipment and issue commands.
 Its versatility allows it to connect to any type of equipment: servers, routers, switches, firewalls, etc.
 
-2) The TextFSM module will allow parsing the output of semi-formatted CLI commands into structured data. The data will be placed in data structures such as lists, dictionaries, etc. This allows its analysis and processing using common programming elements. Netmiko uses the TextFSM module.
+2) The TextFSM module will allow parsing the output of semi-formatted CLI commands into structured data. The data will be stored in various data structures such as lists, dictionaries, etc. This allows analysis and processing using common programming elements. Netmiko uses the TextFSM module.
 
 3) Finally the module XlsxWriter, as its name indicates, allows you to generate and fill in Excel files from the data you provide.
 Here it will be used to format our data and make them presentable, easily readable, and diffusable to other people even non-technical.
@@ -27,7 +27,7 @@ Now that we have stated the purpose of the program and what it does, let's move 
 ## PRE-REQUISITES
 
 - Version Python 3.x.x
-- Install the required packages from the 'requirements.txt file'
+- Install the required packages from the 'requirements.txt' file
   - You can use 'pip install -r requirements.txt'
 
   
@@ -41,7 +41,7 @@ After moving to the folder where the script is stored.
 - Exemple:
   - python3 main.py 10.1.1.1
 
-The script need the device administration IP as an argument to connect.
+The script need the device administration IP as an argument to connect. It will then immediately prompt for username / password and start its work.
 
 After the end of the program, it will generate the excel file containing the researched data.
 The excel filename correspond (by default) to the hostname of the router. It can be found on the same folder than the script.
@@ -50,11 +50,11 @@ The excel filename correspond (by default) to the hostname of the router. It can
 
 I tried to keep the script very basic so that it can be easily customizable.
 
-One way of improving this script could be, let's say if you have a huge number of devices to connect to, is to put those devices administration IP into a text file, and to modifiy the script to iterate through that text file line by line, catch the admin ip, and launch the script as a function sequentially.
+One way of improving this script could be, let's say if you have a huge number of devices to connect to, is to put those devices administration IP into another text file, and to modifiy the script to iterate through that text file line by line, catch the admin ip, and launch the script as a "function" sequentially.
 
-Or maybe you want to put more date into the excel file, so you will likely do some more show commands to gather the particulars information you are looking for and activate some more cells in the excel file to write them.
+Or maybe you want to put more data into the excel file, so you will likely do some more show commands to gather the particular informations you are looking for and activate some more cells in the excel file to write them.
 
-You may also not want to put the login credentials in the script in clear text so you may want to input() those parameters in the program at runtime.
+You may want to hardcode the username in the script for ease of utiliization, this should be a very easy thing to do.
 
 It really depends on you, but feel free to modify and adapt it to your needs. 
 You can share it if you want and drop a comment, I will be more than happy to help :)
