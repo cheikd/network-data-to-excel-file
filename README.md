@@ -54,8 +54,6 @@ One way of improving this script could be, let's say if you have a huge number o
 
 Or maybe you want to put more data into the excel file, so you will likely do some more show commands to gather the particular informations you are looking for and activate some more cells in the excel file to write them.
 
-You may want to hardcode the username in the script for ease of utiliization, this should be a very easy thing to do.
-
 It really depends on you, but feel free to modify and adapt it to your needs. 
 You can share it if you want and drop a comment, I will be more than happy to help :)
  
